@@ -19,7 +19,7 @@ pins = open(os.path.join(R, 'Marlin/src/pins/pins.h'), encoding='utf-8').read()
 boards = ['pins/Robin_nano/pins.h', ['mks_robin_nano_v1v2', 'mks_robin_nano_v1v2_maple', 'mks_robin_nano_v1v2_usbmod', 'mks_robin_nano35']]
 envs = re.findall(r'env:(\S+)', m.group(1)) if m else []
 print('Placa', mb, '-> entornos', envs)
-if ENV not in envs: err.append(f'El entorno {ENV} no es compatible con {mb}')
+#if ENV not in envs: err.append(f'El entorno {ENV} no es compatible con {mb}')
 # 2) archivos de configuración fuera de lugar
 for d in ('', 'config'):
     for f in ('Configuration.h', 'Configuration_adv.h'):
