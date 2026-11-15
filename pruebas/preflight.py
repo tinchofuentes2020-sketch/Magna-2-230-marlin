@@ -4,7 +4,7 @@
 Uso (desde la raíz del proyecto completo): python3 pruebas/preflight.py"""
 import os, re, subprocess, sys, configparser
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-ENV = 'mks_robin_nano_v1_3_f4', 'mks_robin_nano35'
+ENV = 'mks_robin_nano35'
 out = subprocess.check_output(
     'g++ -D__MARLIN_DEPS__ -DARDUINO_ARCH_STM32 -DSTM32F4 -DSTM32F4xx -w -dM -E -x c++ '
     'buildroot/share/PlatformIO/scripts/common-dependencies.h', shell=True, cwd=R, text=True)
