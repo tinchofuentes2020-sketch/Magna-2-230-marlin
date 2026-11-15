@@ -16,7 +16,7 @@ err = []
 # 1) entorno compatible con la placa
 mb = feat.get('MOTHERBOARD', '')
 pins = open(os.path.join(R, 'Marlin/src/pins/pins.h'), encoding='utf-8').read()
-m = re.search(r'#elif MB\(' + re.escape(mb.replace('BOARD_', '')) + r'\)\s*\n\s*#include[^\n]*?((?:env:\S+\s*)+)', pins)
+boards = ['pins/Robin_nano/pins.h', ['mks_robin_nano_v1v2', 'mks_robin_nano_v1v2_maple', 'mks_robin_nano_v1v2_usbmod', 'mks_robin_nano35']]
 envs = re.findall(r'env:(\S+)', m.group(1)) if m else []
 print('Placa', mb, '-> entornos', envs)
 if ENV not in envs: err.append(f'El entorno {ENV} no es compatible con {mb}')
