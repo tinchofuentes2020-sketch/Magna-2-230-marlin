@@ -68,7 +68,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4  // Magna2-230: MKS Robin Nano V1.3 (STM32F407)
+  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO35
 #endif
 
 // @section serial
